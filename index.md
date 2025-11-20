@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# SQA Automation Engineer: [Your Name]
+# SQA Automation Engineer: Hamza Sadiq
 
 ## Transforming Quality Assurance into Engineering Excellence
 
