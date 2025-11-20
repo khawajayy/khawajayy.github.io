@@ -1,0 +1,15 @@
+# Basic Site Settings
+title: SQA Automation Portfolio | Your Name
+email: your.professional.email@example.com
+description: >-
+  SQA Engineer focused on robust, scalable test automation using Playwright,
+  TypeScript, and CI/CD pipelines.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yourusername.github.io" # the base hostname & protocol for your site
+
+# Theme Settings
+theme: jekyll-theme-minimal
+
+# Optional: Enable the GitHub Metadata plugin (recommended)
+plugins:
+  - jekyll-github-metadata
