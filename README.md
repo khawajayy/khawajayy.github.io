@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HAMZA://OS — Personal Website
 
-## Getting Started
+A cinematic, dark-premium personal site for Hamza Sadiq. Built to feel like exploring the digital mind of a curious engineer, not a portfolio template.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 16 (App Router, Turbopack) + React 19 + TypeScript
+- Tailwind CSS v4
+- Framer Motion (scroll reveals, springs, page choreography)
+- Three.js (interactive travel globe)
+- Canvas 2D (starfield, neural network, matrix rain, confetti)
+- WebAudio (synthesized crowd noise in Football Mode, zero audio assets)
+- Geist / Geist Mono via the local `geist` package (no network fetch at build)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Architecture
 
-## Learn More
+```
+lib/data.ts          single source of truth for ALL content
+lib/bus.ts           CustomEvent bus (terminal → easter egg overlays)
+components/
+  Experience.tsx     orchestrates the whole page (globe lazy-loaded)
+  Preloader.tsx      terminal boot sequence (skipped on repeat visits)
+  Starfield.tsx      fixed background: stars, aurora, shooting stars
+  Cursor.tsx         glowing orb cursor (fine pointers only)
+  Magnetic.tsx       magnetic-hover wrapper
+  ...one file per section
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Editing content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Everything a visitor reads lives in [lib/data.ts](lib/data.ts) — roles, timeline, projects, skills, books, stats, terminal responses, and the Ask Hamza AI knowledge base. Edit that one file to update the site.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Replace [public/Hamza-Sadiq-Resume.pdf](public/Hamza-Sadiq-Resume.pdf)** — the current file is a generated placeholder.
 
-## Deploy on Vercel
+Update the LinkedIn/GitHub URLs in `lib/data.ts` (`identity`) if the handles differ.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Hidden things
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Terminal: `help`, plus undocumented `sudo hire hamza`, `matrix`, `42`, `football`
+- Konami code (↑↑↓↓←→←→BA) switches the accent theme
+- Double-click the nav logo → Developer Mode
+- The ⚽ in the footer → Football Mode
